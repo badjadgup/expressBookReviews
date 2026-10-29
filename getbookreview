@@ -1,0 +1,4 @@
+$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:5000/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{}
+HTTP_STATUS:200

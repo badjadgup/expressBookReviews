@@ -1,0 +1,26 @@
+$ curl.exe --silent --show-error --fail-with-body --request PUT --header "Content-Type: application/json" --cookie .evidence-cookies --data-binary @scripts/payloads/review.json http://127.0.0.1:5000/customer/auth/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "message": "Review successfully added.",
+  "reviews": {
+    "course_demo": "A thoughtful and compelling novel about tradition and change."
+  }
+}
+HTTP_STATUS:200
+
+$ curl.exe --silent --show-error --fail-with-body --request PUT --header "Content-Type: application/json" --cookie .evidence-cookies --data-binary @scripts/payloads/modified-review.json http://127.0.0.1:5000/customer/auth/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "message": "Review successfully modified.",
+  "reviews": {
+    "course_demo": "An insightful novel with memorable characters and a powerful exploration of cultural change."
+  }
+}
+HTTP_STATUS:200
+
+$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:5000/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "course_demo": "An insightful novel with memorable characters and a powerful exploration of cultural change."
+}
+HTTP_STATUS:200

@@ -1,0 +1,7 @@
+$ curl.exe --silent --show-error --fail-with-body --request POST --header "Content-Type: application/json" --data-binary @scripts/payloads/register.json http://127.0.0.1:5000/register --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "message": "User successfully registered. You can now log in.",
+  "username": "course_demo"
+}
+HTTP_STATUS:201

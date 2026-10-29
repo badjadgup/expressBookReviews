@@ -1,0 +1,12 @@
+$ curl.exe --silent --show-error --fail-with-body --request DELETE --cookie .evidence-cookies http://127.0.0.1:5000/customer/auth/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "message": "Review successfully deleted.",
+  "reviews": {}
+}
+HTTP_STATUS:200
+
+$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:5000/review/1 --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{}
+HTTP_STATUS:200

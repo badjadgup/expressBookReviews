@@ -1,0 +1,10 @@
+$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:5000/title/Things%20Fall%20Apart --write-out "\nHTTP_STATUS:%{http_code}\n"
+
+{
+  "1": {
+    "author": "Chinua Achebe",
+    "title": "Things Fall Apart",
+    "reviews": {}
+  }
+}
+HTTP_STATUS:200

@@ -1,0 +1,9 @@
+PENDING: This is a setup note, not a cURL output or proof of a fork.
+
+Create a PUBLIC fork of https://github.com/ibm-developer-skills-network/expressBookReviews
+Then from final_project run:
+  npm run evidence:github -- YOUR_USERNAME/YOUR_FORK_NAME
+
+That command checks fork=true and parent.full_name, then replaces this file
+with the actual cURL command and GitHub API output. Submit that regenerated
+file's contents for question 1. Do not submit this setup note.
